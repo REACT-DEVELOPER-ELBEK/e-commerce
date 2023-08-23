@@ -7,12 +7,4 @@ burger.addEventListener('click', () => {
     menu.style.display = 'block'
     hero.style.display = 'none'
     discounts.style.marginTop = '220px'
-
-    if(menu = menu.style.display === 'block'){
-        burger.addEventListener('click', () =>{
-            menu.style.display = 'none'
-            hero.style.display = 'block'
-        })
-        
-    }
 })

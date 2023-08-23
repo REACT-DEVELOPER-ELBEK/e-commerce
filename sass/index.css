@@ -40,6 +40,10 @@ nav .container .nav__wrapper {
   align-items: center;
   justify-content: center;
 }
+nav .container .nav__wrapper .logo {
+  display: flex;
+  gap: 14px;
+}
 nav .container .nav__wrapper #burger {
   margin-left: 40px;
   display: flex;
@@ -70,6 +74,7 @@ nav .container .nav__wrapper #nav__search .nav_search {
   border: 1px solid var(--main-secondary, #70C05B);
   background: var(--main-surface, #FFF);
   padding: 8px 40px 8px 8px;
+  max-width: 355px;
 }
 nav .container .nav__wrapper #nav__search .nav_search::-moz-placeholder {
   color: var(--grayscale-hard, #8F8F8F);
@@ -101,7 +106,7 @@ nav .container .nav__wrapper .nav__items .nav__item {
   justify-content: center;
   align-items: center;
 }
-nav .container .nav__wrapper .nav__items .nav__item p {
+nav .container .nav__wrapper .nav__items .nav__item a {
   color: var(--main-on-surface, #414141);
   text-align: center;
   font-family: Rubik;
@@ -212,7 +217,7 @@ nav .container .nav__wrapper .nav__account svg {
   padding-left: 5px;
   transition: 0.3s;
 }
-.discounts .container .discount__wrapper .discount__title .all__products p {
+.discounts .container .discount__wrapper .discount__title .all__products a {
   color: var(--grayscale-hardest, #606060);
   text-align: center;
   font-family: Rubik;
@@ -360,7 +365,7 @@ nav .container .nav__wrapper .nav__account svg {
   padding-left: 4px;
   transition: 0.3s;
 }
-.recent__bought .container .recent__wrapper .recent__title button p {
+.recent__bought .container .recent__wrapper .recent__title button a {
   color: var(--grayscale-hardest, #606060);
   text-align: center;
   font-family: Rubik;
@@ -604,7 +609,7 @@ nav .container .nav__wrapper .nav__account svg {
   gap: 10px;
   align-items: center;
 }
-.states .container .states__wrapper .states__title button p {
+.states .container .states__wrapper .states__title button a {
   color: var(--grayscale-hardest, #606060);
   text-align: center;
   font-family: Rubik;
@@ -623,6 +628,7 @@ nav .container .nav__wrapper .nav__account svg {
   margin-top: 40px;
 }
 .states .container .states__wrapper .states__cards .states__card {
+  max-width: 376px;
   border-radius: 4px;
   background: var(--main-surface, #FFF);
   cursor: pointer;
@@ -740,4 +746,159 @@ nav .container .nav__wrapper .nav__account svg {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+
+@media (max-width: 768px) {
+  nav .container .nav__wrapper #nav__search {
+    padding: 8px 5px 8px 8px;
+  }
+  nav .container .nav__wrapper .nav__items {
+    gap: 0px;
+  }
+  nav .container .nav__wrapper .logo .logo2 {
+    display: none;
+  }
+  nav .container .nav__wrapper .nav__account p, nav .container .nav__wrapper .nav__account svg {
+    display: none;
+  }
+  nav .container .nav__wrapper #burger {
+    margin-left: 20px;
+  }
+  nav .container .nav__wrapper #burger p {
+    display: none;
+  }
+  .discounts .container .discount__wrapper .discount__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+  }
+  .discounts .container .discount__wrapper .discount__cards .discount__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+  }
+  .discounts .container .discount__wrapper .discount__cards .discount__card .like {
+    margin-bottom: 300px;
+  }
+  .discounts .container .discount__wrapper .discount__cards .discount__card .discounts__discount {
+    display: none;
+  }
+  .recent__bought .container .recent__wrapper .recent__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+  }
+  .recent__bought .container .recent__wrapper .recent__cards .recent__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+  }
+  .recent__bought .container .recent__wrapper .recent__cards .recent__card .like {
+    margin-bottom: 300px;
+  }
+  .special__discount .container .special__discount__cards {
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .states .container .states__wrapper .states__cards {
+    flex-direction: column;
+    margin-left: 150px;
+  }
+  .footer .container .footer__wrapper img {
+    display: none;
+    background-image: url(../img/footer-logo-768.svg);
+  }
+  .footer .container .footer__wrapper .footer__links {
+    max-width: 350px;
+    flex-wrap: wrap;
+  }
+  .footer .container .footer__wrapper .footer__social__medias .social__media__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  nav .container .nav__wrapper #nav__search {
+    width: 2600px;
+  }
+  nav .container .nav__wrapper .nav__items {
+    display: none;
+  }
+  nav .container .nav__wrapper .nav__account {
+    display: none;
+  }
+  nav .container .nav__wrapper #burger {
+    display: none;
+  }
+  .discounts .container .discount__wrapper .discount__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+  }
+  .discounts .container .discount__wrapper .discount__cards .discount__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+  }
+  .discounts .container .discount__wrapper .discount__cards .discount__card .like {
+    margin-bottom: 300px;
+  }
+  .discounts .container .discount__wrapper .discount__cards .discount__card .discounts__discount {
+    display: none;
+  }
+  .recent__bought .container .recent__wrapper .recent__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+  }
+  .recent__bought .container .recent__wrapper .recent__cards .recent__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+  }
+  .recent__bought .container .recent__wrapper .recent__cards .recent__card .like {
+    margin-bottom: 300px;
+  }
+  .special__discount .container .special__discount__cards {
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .states .container .states__wrapper .states__cards {
+    flex-direction: column;
+    margin-left: 150px;
+  }
+  .footer .container .footer__wrapper img {
+    display: none;
+    background-image: url(../img/footer-logo-768.svg);
+  }
+  .footer .container .footer__wrapper .footer__links {
+    max-width: 350px;
+    flex-wrap: wrap;
+  }
+  .footer .container .footer__wrapper .footer__social__medias .social__media__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
 }/*# sourceMappingURL=index.css.map */
