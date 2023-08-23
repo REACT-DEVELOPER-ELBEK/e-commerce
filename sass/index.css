@@ -1,0 +1,743 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--main-secondary-muted, #E5FFDE);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+nav {
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+nav .container .nav__wrapper {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .container .nav__wrapper #burger {
+  margin-left: 40px;
+  display: flex;
+  border-radius: 4px;
+  background: var(--main-secondary, #70C05B);
+  gap: 8px;
+  max-width: 140px;
+  height: 40px;
+  padding: 0 15px;
+  justify-content: center;
+  align-items: center;
+}
+nav .container .nav__wrapper #burger p {
+  color: var(--main-on-secondary, #FFF);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0px;
+}
+nav .container .nav__wrapper #nav__search {
+  margin-left: 18px;
+}
+nav .container .nav__wrapper #nav__search .nav_search {
+  border-radius: 4px;
+  border: 1px solid var(--main-secondary, #70C05B);
+  background: var(--main-surface, #FFF);
+  padding: 8px 40px 8px 8px;
+}
+nav .container .nav__wrapper #nav__search .nav_search::-moz-placeholder {
+  color: var(--grayscale-hard, #8F8F8F);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-right: 30px;
+}
+nav .container .nav__wrapper #nav__search .nav_search::placeholder {
+  color: var(--grayscale-hard, #8F8F8F);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-right: 30px;
+}
+nav .container .nav__wrapper .nav__items {
+  display: flex;
+  gap: 24px;
+}
+nav .container .nav__wrapper .nav__items .nav__item {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+nav .container .nav__wrapper .nav__items .nav__item p {
+  color: var(--main-on-surface, #414141);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+nav .container .nav__wrapper .nav__account {
+  margin-left: 32px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav .container .nav__wrapper .nav__account p {
+  color: var(--on-surface, #232323);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+nav .container .nav__wrapper .nav__account svg {
+  padding: 8px;
+}
+
+.burger__menu__wrapper {
+  display: none;
+}
+.burger__menu__wrapper .burger__menu {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+  margin: 40px 0;
+  position: absolute;
+  background: #FFF;
+  margin-top: 0;
+  margin-left: 0;
+  padding-bottom: 30px;
+}
+.burger__menu__wrapper .burger__menu span {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.burger__menu__wrapper .burger__menu span a {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  cursor: pointer;
+}
+.burger__menu__wrapper .burger__menu span a:hover {
+  color: #F63;
+  transition: 0.5s;
+}
+
+.hero {
+  background-image: url(../img/hero__bg.png);
+  background-size: cover;
+  z-index: 2;
+}
+.hero .hero__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.hero .hero__wrapper h1 {
+  color: var(--main-on-surface, #414141);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.discounts {
+  margin-top: 80px;
+}
+.discounts .container .discount__wrapper .discount__title {
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+}
+.discounts .container .discount__wrapper .discount__title h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.discounts .container .discount__wrapper .discount__title .all__products {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 15px;
+  background: transparent;
+}
+.discounts .container .discount__wrapper .discount__title .all__products:hover svg {
+  padding-left: 5px;
+  transition: 0.3s;
+}
+.discounts .container .discount__wrapper .discount__title .all__products p {
+  color: var(--grayscale-hardest, #606060);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.discounts .container .discount__wrapper .discount__cards {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card {
+  cursor: pointer;
+  border-radius: 4px;
+  background: var(--main-surface, #FFF);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card:hover {
+  box-shadow: -14px 21px 22px 16px rgba(34, 60, 80, 0.2);
+  transition: 0.6s;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .like {
+  position: absolute;
+  margin-left: 232px;
+  margin-top: 8px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discounts__discount {
+  position: relative;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discounts__discount p {
+  color: var(--main-on-primary, #FFF);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border-radius: 4px;
+  background: var(--main-primary, #F63);
+  padding-left: 4px;
+  padding-right: 40px;
+  width: 40px;
+  height: 24px;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 10px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text {
+  padding: 8px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text .discount__price {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 116px;
+  grid-row-gap: 0px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text .discount__price p {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text .discount__price h3 {
+  color: var(--grayscale-hardest, #606060);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text .discount__price h4 {
+  color: var(--grayscale-light, #BFBFBF);
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text p {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 256px;
+  margin-top: 0px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text .discount__raiting {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text button {
+  border-radius: 4px;
+  margin-top: 8px;
+  border: 1px solid var(--main-secondary, #70C05B);
+  color: var(--main-secondary, #70C05B);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 256px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card .discount__card__text button:hover {
+  background: var(--main-primary, #F63);
+  color: var(--main-on-primary, #FFF);
+  transition: 0.5s;
+}
+
+.recent__bought {
+  margin-top: 120px;
+}
+.recent__bought .container .recent__wrapper .recent__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recent__bought .container .recent__wrapper .recent__title h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.recent__bought .container .recent__wrapper .recent__title button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.recent__bought .container .recent__wrapper .recent__title button:hover svg {
+  padding-left: 4px;
+  transition: 0.3s;
+}
+.recent__bought .container .recent__wrapper .recent__title button p {
+  color: var(--grayscale-hardest, #606060);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.recent__bought .container .recent__wrapper .recent__cards {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card {
+  cursor: pointer;
+  border-radius: 4px;
+  background: var(--main-surface, #FFF);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card:hover {
+  box-shadow: -14px 21px 22px 16px rgba(34, 60, 80, 0.2);
+  transition: 0.6s;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .like {
+  position: absolute;
+  margin-left: 232px;
+  margin-top: 8px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__discount {
+  position: relative;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__discount p {
+  color: var(--main-on-primary, #FFF);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background: var(--main-primary, #F63);
+  padding: 8px;
+  width: 40px;
+  height: 24px;
+  position: absolute;
+  margin-top: 118px;
+  margin-left: 8px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text {
+  padding: 8px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text .recent__price {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 116px;
+  grid-row-gap: 0px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text .recent__price p {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text .recent__price h3 {
+  color: var(--grayscale-hardest, #606060);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text .recent__price h4 {
+  color: var(--grayscale-light, #BFBFBF);
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text p {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 256px;
+  margin-top: 0px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text .recent__raiting {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text button {
+  border-radius: 4px;
+  margin-top: 8px;
+  border: 1px solid var(--main-secondary, #70C05B);
+  color: var(--main-secondary, #70C05B);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 256px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+.recent__bought .container .recent__wrapper .recent__cards .recent__card .recent__card__text button:hover {
+  background: var(--main-primary, #F63);
+  color: var(--main-on-primary, #FFF);
+  transition: 0.5s;
+}
+
+.special__discount {
+  margin-top: 120px;
+}
+.special__discount .container .special__discount__wrapper .special__discount__title h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.special__discount .container .special__discount__wrapper .special__discount__cards {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+.special__discount .container .special__discount__wrapper .special__discount__cards .special__discount__card__cart {
+  cursor: pointer;
+  height: 200px;
+  max-width: 584px;
+  border-radius: 4px;
+  background: #FCD5BA;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 21px;
+  box-shadow: 0px 8px 16px 0px rgba(202, 147, 96, 0.5);
+}
+.special__discount .container .special__discount__wrapper .special__discount__cards .special__discount__card__cart:hover {
+  box-shadow: -14px 21px 22px 16px rgba(34, 60, 80, 0.2);
+  transition: 0.6s;
+}
+.special__discount .container .special__discount__wrapper .special__discount__cards .special__discount__card__cart span {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.special__discount .container .special__discount__wrapper .special__discount__cards .special__discount__card__cart span h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  max-width: 258px;
+}
+.special__discount .container .special__discount__wrapper .special__discount__cards .special__discount__card__cart span p {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  min-width: 258px;
+}
+
+.locations {
+  margin-top: 120px;
+}
+.locations .container .locations__wrapper .locations__title {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.locations .container .locations__wrapper .locations__title h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.locations .container .locations__wrapper .locations__title .locations__btns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.locations .container .locations__wrapper .locations__title .locations__btns button {
+  color: var(--grayscale-hardest, #606060);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  border-radius: 4px;
+  background: var(--grayscale-lightest, #F3F2F1);
+  padding: 8px;
+}
+.locations .container .locations__wrapper .locations__title .locations__btns button:hover {
+  background: var(--main-secondary, #70C05B);
+  transition: 0.6s;
+  color: #FFF;
+}
+.locations .container .locations__wrapper .locations__map {
+  margin-top: 24px;
+}
+
+.states {
+  margin-top: 120px;
+}
+.states .container .states__wrapper .states__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.states .container .states__wrapper .states__title h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.states .container .states__wrapper .states__title button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.states .container .states__wrapper .states__title button p {
+  color: var(--grayscale-hardest, #606060);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.states .container .states__wrapper .states__title button:hover svg {
+  padding-left: 5px;
+  transition: 0.3s;
+}
+.states .container .states__wrapper .states__cards {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+.states .container .states__wrapper .states__cards .states__card {
+  border-radius: 4px;
+  background: var(--main-surface, #FFF);
+  cursor: pointer;
+  box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+}
+.states .container .states__wrapper .states__cards .states__card:hover {
+  box-shadow: -14px 21px 22px 16px rgba(34, 60, 80, 0.2);
+  transition: 0.6s;
+}
+.states .container .states__wrapper .states__cards .states__card .states__card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.states .container .states__wrapper .states__cards .states__card .states__card__content h3 {
+  color: var(--grayscale-hard, #8F8F8F);
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.states .container .states__wrapper .states__cards .states__card .states__card__content h2 {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  max-width: 356px;
+  margin-top: 10px;
+  height: 54px;
+}
+.states .container .states__wrapper .states__cards .states__card .states__card__content p {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  max-width: 356px;
+  margin-top: 10px;
+  height: 120px;
+}
+.states .container .states__wrapper .states__cards .states__card .states__card__content button {
+  border-radius: 4px;
+  background: var(--main-surface, #FFF);
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  color: var(--main-secondary, #70C05B);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 8px;
+  width: 150px;
+}
+.states .container .states__wrapper .states__cards .states__card .states__card__content button:hover {
+  background-color: #70C05B;
+  color: #FFF;
+  transition: 0.5s;
+}
+
+.footer {
+  background-image: url(../img/footer-bg.png);
+  background-size: cover;
+  margin-top: 80px;
+  padding-bottom: 68px;
+}
+.footer .container .footer__wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.footer .container .footer__wrapper .footer__links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding-top: 24px;
+}
+.footer .container .footer__wrapper .footer__links a {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.footer .container .footer__wrapper .footer__links a:hover {
+  text-decoration: underline;
+}
+.footer .container .footer__wrapper .footer__social__medias {
+  display: flex;
+  gap: 40px;
+}
+.footer .container .footer__wrapper .footer__social__medias .social__media__links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer .container .footer__wrapper .footer__social__medias .social__media__links svg {
+  cursor: pointer;
+}
+.footer .container .footer__wrapper .footer__social__medias span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .container .footer__wrapper .footer__social__medias span a {
+  color: var(--main-on-surface, #414141);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}/*# sourceMappingURL=index.css.map */
