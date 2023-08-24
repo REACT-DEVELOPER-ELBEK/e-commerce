@@ -9,12 +9,17 @@ burger.addEventListener('click', () => {
     discounts.style.marginTop = '220px'
 })
 
-
 let specialDiscounts = document.querySelector('.special__discount__cards')
-let arr = [...specialDiscounts.children]
-let obj = {}
-for(let i = 0; i<=1; i++){
-    obj+=arr[i].innerHTML
-    console.log(obj)
-}
-// console.log(obj)
+    for(let i = 0; i<specialDiscounts.children.length; i++){
+        let arrays = Object.assign({}, [specialDiscounts.children[i]])
+    console.log(arrays)
+    }
+
+let recentBought = document.querySelector(".recent__cards")
+let recentBoughtChilds = recentBought.children
+let recentBoughtArray = [...recentBoughtChilds]
+let getLastChilds = recentBoughtArray.splice(-4)
+console.log(getLastChilds)
+
+
+
