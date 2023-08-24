@@ -8,3 +8,11 @@ burger.addEventListener('click', () => {
     hero.style.display = 'none'
     discounts.style.marginTop = '220px'
 })
+
+
+// let allProducts = document.querySelector('.discount__cards')
+// let products = document.querySelector('.discount__card')
+// for(let i = 0; i<4; i++){
+//     allProducts.removeChild(allProducts.children[i])
+// }
+

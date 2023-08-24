@@ -8,3 +8,13 @@ burger.addEventListener('click', () => {
     hero.style.display = 'none'
     discounts.style.marginTop = '220px'
 })
+
+
+let specialDiscounts = document.querySelector('.special__discount__cards')
+let arr = [...specialDiscounts.children]
+let obj = {}
+for(let i = 0; i<=1; i++){
+    obj+=arr[i].innerHTML
+    console.log(obj)
+}
+// console.log(obj)
