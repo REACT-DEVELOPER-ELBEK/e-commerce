@@ -213,6 +213,7 @@ nav .container .nav__wrapper .nav__account svg {
   grid-column-gap: 40px;
   grid-row-gap: 50px;
   margin-top: 40px;
+  list-style-type: none;
 }
 .discounts .container .discount__wrapper .discount__cards .discount__card {
   height: 330px;
@@ -221,6 +222,9 @@ nav .container .nav__wrapper .nav__account svg {
   background: var(--main-surface, #FFF);
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+.discounts .container .discount__wrapper .discount__cards .discount__card li {
+  list-style-type: none;
 }
 .discounts .container .discount__wrapper .discount__cards .discount__card:hover {
   box-shadow: -14px 21px 22px 16px rgba(34, 60, 80, 0.2);
