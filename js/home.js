@@ -87,7 +87,7 @@ discountCards.map((card) => {
         <p>${card.name}</p>
 
         <div class="discount__raiting">
-            
+        
         </div>
 
         <button>В корзину</button>
@@ -100,3 +100,16 @@ getDiscountCard.innerHTML = disCard
 
 
 
+let modalOpen = document.querySelector('.nav__account')
+let body = document.querySelector('body')
+let modal = document.querySelector('.modal')
+let modalClose = document.querySelector('#modal-close')
+
+modalOpen.addEventListener('click', () => {
+    modal.style.top = '0'
+    modal.style.transition = '0.5s'
+})
+
+modalClose.addEventListener('click', () => {
+    modal.style.top = '-100%'
+})

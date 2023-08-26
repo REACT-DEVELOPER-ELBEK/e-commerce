@@ -8,6 +8,26 @@
     <link rel="shortcut icon" href="/img/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
+    <div class="modal">
+        <button id="modal-close">
+            <img src="./img/modal-close.svg" alt="close-btn">
+        </button>
+
+        <div class="modal__elements">
+            <h2>Вход</h2>
+
+            <label for="modal-input">Телефон
+            <input type="tel" name="modal-input" id="modal-input" value="+998">
+        </label>
+
+            <button id="enter-to-account">Вход</button>
+
+            <div class="modal__btn__choices">
+                <button>Регистрация</button>
+                <button>Забыли пароль?</button>
+            </div>
+        </div>
+    </div>
     <nav>
        <div class="container">
         <div class="nav__wrapper">
@@ -32,11 +52,11 @@
                 </div>
             </div>
 
-            <div class="nav__account">
+            <button class="nav__account">
                 <img src="./img/nav__ava.svg" alt="">
                 <p>Алексей</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5.64645 8.64645C5.84171 8.45118 6.15829 8.45118 6.35355 8.64645L12 14.2929L17.6464 8.64645C17.8417 8.45118 18.1583 8.45118 18.3536 8.64645C18.5488 8.84171 18.5488 9.15829 18.3536 9.35355L12.3536 15.3536C12.1583 15.5488 11.8417 15.5488 11.6464 15.3536L5.64645 9.35355C5.45118 9.15829 5.45118 8.84171 5.64645 8.64645Z" fill="#414141"/> </svg>
-            </div>
+            </button>
         </div>
        </div>
     </nav>
@@ -80,7 +100,7 @@
                     <h2>Акции</h2>
                     <button class="all__products">
                         <a href="./products.html">Все продукты</a>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.64645 5.64645C8.84171 5.45118 9.15829 5.45118 9.35355 5.64645L15.3536 11.6464C15.5488 11.8417 15.5488 12.1583 15.3536 12.3536L9.35355 18.3536C9.15829 18.5488 8.84171 18.5488 8.64645 18.3536C8.45118 18.1583 8.45118 17.8417 8.64645 17.6464L14.2929 12L8.64645 6.35355C8.45118 6.15829 8.45118 5.84171 8.64645 5.64645Z" fill="#606060"/>
                           </svg>
                     </button>

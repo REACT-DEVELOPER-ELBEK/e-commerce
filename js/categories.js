@@ -12,32 +12,32 @@ let cards = [
     },
 
     {
-        id: 'protains',
+        id: 'breads',
         image: '../img/catalog2.png'
     },
 
     {
-        id: 'protains',
+        id: 'frozenProducts',
         image: '../img/catalog3.png'
     },
 
     {
-        id: 'protains',
+        id: 'drinks',
         image: '../img/catalog4.png'
     },
 
     {
-        id: 'protains',
+        id: 'candies',
         image: '../img/catalog5.png'
     },
 
     {
-        id: 'protains',
+        id: 'teaCoffee',
         image: '../img/catalog6.png'
     },
 
     {
-        id: 'protains',
+        id: 'grocery',
         image: '../img/catalog7.png'
     },
 
@@ -47,22 +47,22 @@ let cards = [
     },
 
     {
-        id: 'protains',
+        id: 'healthFoods',
         image: '../img/catalog9.png'
     },
 
     {
-        id: 'protains',
+        id: 'kidsFood',
         image: '../img/catalog10.png'
     },
 
     {
-        id: 'protains',
+        id: 'meats',
         image: '../img/catalog11.png'
     },
 
     {
-        id: 'protains',
+        id: 'cleaning',
         image: '../img/catalog12.png'
     }
 ]
