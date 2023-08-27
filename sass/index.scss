@@ -1087,7 +1087,9 @@ nav{
                     width: 2600px;
                 }
                 .nav__items{
-                    display: none;
+                    .nav__item{
+                        display: none;
+                    }
                 }
 
                 .nav__account{

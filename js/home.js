@@ -28,6 +28,7 @@ let discountCards = [
     {
         img: '../img/discount2.png',
         priceWithCard: '44,50 ₽', 
+        href: '../products/milk.html',
         priceWithCash: '50,50 ₽', 
         name: 'Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...',
         raiting: [
@@ -71,7 +72,7 @@ let discountCards = [
 let disCard = ''
 discountCards.map((card) => {
     disCard+=`
-    <div class="discount__card">
+    <a href="${card.href}"class="discount__card">
     <div class="like"><img src="./img/like.svg" alt=""></div>
     <div class="discounts__discount"><p>-50%</p></div>
     <img src=${card.img} alt="image">
@@ -92,7 +93,7 @@ discountCards.map((card) => {
 
         <button>В корзину</button>
     </div>
-</div>
+</a>
     `
 })
 

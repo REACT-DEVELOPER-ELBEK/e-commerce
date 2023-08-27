@@ -940,7 +940,7 @@ nav .container .nav__wrapper .nav__account svg {
   nav .container .nav__wrapper #nav__search {
     width: 2600px;
   }
-  nav .container .nav__wrapper .nav__items {
+  nav .container .nav__wrapper .nav__items .nav__item {
     display: none;
   }
   nav .container .nav__wrapper .nav__account {
