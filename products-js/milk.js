@@ -22,31 +22,58 @@ let product = [
 }
 ]
 
-let productParent = document.querySelector('.product__card__choice')
-let cardButtons = document.querySelectorAll('#choice')
-let mainImage = document.querySelector('.card__main > img')
+// let productParent = document.querySelector('.product__card__choice')
+// let cardButtons = document.querySelectorAll('#choice')
+// let mainSrc = document.querySelector('.card__main>img')
 
-let str = ''
+// let str = ''
+// product.map((e) => {
+//     str += `
+//     <div class="product__choices">
+//     <button id="choice"><img src= ${e.images[0]} alt=""></button>
+//     <button id="choice"><img src= ${e.images[1]} alt=""></button>
+//     <button id="choice"><img src= ${e.images[2]} alt=""></button>
+//     <button id="choice"><img src= ${e.images[3]} alt=""></button>
+//     <button id="choice"><img src= ${e.images[4]} alt=""></button>
+//     </div>
 
-product.map((e) => {
-    str += `
-    <div class="product__choices">
-    <button id="choice"><img src= ${e.images[0]} alt=""></button>
-    <button id="choice"><img src= ${e.images[1]} alt=""></button>
-    <button id="choice"><img src= ${e.images[2]} alt=""></button>
-    <button id="choice"><img src= ${e.images[3]} alt=""></button>
-    <button id="choice"><img src= ${e.images[4]} alt=""></button>
-    </div>
-    <div class="card__main">
-    <img src="" alt="img">
-    </div>
-    `
-})
+//     <img class="cards__main" src= ${e.images[0]} >
 
-productParent.innerHTML = str
+//     `
+// })
+
+// productParent.innerHTML = str
 
 // for(let i = 0; i<cardButtons.length; i++){
 //     cardButtons[i].addEventListener('click', () => {
-//         mainImage.src = cardButtons[i]
+//         mainSrc.src=`${product.images[i].innerHTML}`
 //     })
 // }
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
